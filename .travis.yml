@@ -22,8 +22,3 @@ addons:
   branches:
     - sonarqube
     - master
-install:
-  - if [ "$MONO_V" = "MONO2" ]; nuget restore src/NLog.mono2.sln; fi
-  - if [ "$MONO_V" = "MONO4" ]; nuget restore src/NLog.mono4.sln; fi
-  - nuget install xunit.runners -Version 1.9.2 -OutputDirectory testrunner
-
